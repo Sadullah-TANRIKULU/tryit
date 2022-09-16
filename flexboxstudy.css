@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+.css-flexbox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: calc(100vh - 1rem);
+    place-items: initial;
+    padding: 1rem;
+    background: linear-gradient(to left, rgba(25, 65, 120, 0.4), rgba(45, 77, 23, 1));
+    font-family: 'Kanit', sans-serif;
+}
+.child-div0 {
+    flex: 1;
+}
+.child-div1 {
+    flex: 1;
+}
+.child-div2 {
+    flex: 1;
+}
+.child-div2:hover {
+    flex: 0;
+}
+.child-div3 {
+    flex-shrink: 0;
+}
+.child-div4 {
+    flex-shrink: 1;
+}
+.child-div5:hover {
+    flex-grow: 0;
+}
+.child-div6:hover {
+    flex-grow: 1;
+}
+.parent-div3:hover .child-div7 {
+    flex-basis: 8rem;
+}
+.parent-div3:hover .child-div8 {
+    flex-basis: 32rem;
+}
+.parent-div3:hover .child-div9 {
+    flex-basis: 8rem;
+}
+.parent-div4:hover .child-div10 {
+    order: 2;    
+}
+.parent-div4:hover .child-div11 {
+    order: 3;
+}
+.parent-div4:hover .child-div12 {
+    order: 1;
+}
+
+

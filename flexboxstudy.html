@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flexboxstudy.css">
+    <title>Document</title>
+    <style>
+        h2 {
+            font-size: 2rem;
+            background: linear-gradient(to left, rgba(25, 65, 120, 0.4), rgba(45, 77, 23, 1));
+            font-family: 'Kanit', sans-serif;
+            text-align: center;
+            margin: 0;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>To remember CSS " FlexBox "</h2>
+    <div class="css-flexbox" style="
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    ">
+        <div class="parent-div1" style="
+        background-color:red;
+        width: calc(100vw - 6rem);
+        height: 8rem;
+        display: flex;
+        gap: 5px;
+        padding: 1rem;">
+            <span style="font-size: 2.5rem;flex-shrink: 0;"> parent div1</span>
+
+            <div class="child-div0" style="
+            background-color: yellow;
+            width: 9rem;">
+                child div0
+                <p>flex: 1;</p>
+            </div>
+            <div class="child-div1" style="
+            background-color: yellow;
+            width: 9rem;">
+                child div1
+                <p>flex: 1;</p>
+            </div>
+
+            <div class="child-div2" style="
+            background-color: aqua;
+            width: 15rem;
+            ">child div2
+                <p>flex: 1;</p>
+                <p>hover --> flex: 0;</p>
+            </div>
+
+        </div>
+        <div class="parent-div2" style="
+        background-color:red;
+        width: calc(100vw - 6rem);
+        height: 8rem;
+        display: flex;
+        gap: 5px;
+        padding: 1rem;">
+            <span style="font-size: 2.5rem;flex-shrink: 0;"> parent div2</span>
+
+            <div class="child-div3" style="
+        background-color: chartreuse;
+        width: 10rem;
+        ">child div3
+                <p>flex-shrink: 0;</p>
+            </div>
+            <div class="child-div4" style="
+            background-color: yellow;
+            width: 9rem;">
+                child div4
+                <p>flex-shrink: 1;</p>
+            </div>
+
+            <div class="child-div5" style="
+            background-color: aqua;
+            width: 15rem;
+            ">child div5
+                <p>flex-grow: 0;</p>
+            </div>
+
+            <div class="child-div6" style="
+            background-color: chartreuse;
+            width: 10rem;
+            ">child div6
+                <p>flex-grow: 1;</p>
+            </div>
+        </div>
+        <div class="parent-div3" style="
+        background-color:red;
+        width: calc(100vw - 6rem);
+        height: 8rem;
+        display: flex;
+        gap: 5px;
+        padding: 1rem;">
+            <span style="font-size: 2.5rem;flex-shrink: 0;"> parent div3</span>
+
+            <div class="child-div7" style="
+            background-color: yellow;
+           ">
+                child div7
+                <p>flex-basis: 8rem;</p>
+            </div>
+
+            <div class="child-div8" style="
+            background-color: aqua;
+            
+            ">child div8
+                <p>flex-basis: 32rem;</p>
+            </div>
+
+            <div class="child-div9" style="
+            background-color: chartreuse;
+            
+            ">child div9
+                <p>flex-basis: 8rem;</p>
+            </div>
+        </div>
+
+        <div class="parent-div4" style="
+        background-color:red;
+        width: calc(100vw - 6rem);
+        height: 8rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        padding: 1rem;">
+            <span style="font-size: 2.5rem;flex-shrink: 0;"> parent div4</span>
+
+            <div class="child-div10" style="
+            background-color: yellow;
+            ">
+                child div10
+                <p>order: 2; </p>
+            </div>
+
+            <div class="child-div11" style="
+            background-color: aqua;
+            
+            ">child div11
+                <p>order: 3;</p>
+            </div>
+
+            <div class="child-div12" style="
+            background-color: chartreuse;
+          
+            ">child div12
+                <p>order: 1;
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
