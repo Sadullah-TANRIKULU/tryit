@@ -9,6 +9,9 @@
     background: linear-gradient(to left, rgba(25, 65, 120, 0.4), rgba(45, 77, 23, 1));
     font-family: 'Kanit', sans-serif;
 }
+.child {
+    font-size: 1.5rem;
+}
 .child-div0 {
     flex: 1;
 }
@@ -33,13 +36,13 @@
 .child-div6:hover {
     flex-grow: 1;
 }
-.parent-div3:hover .child-div7 {
+.child-div7:hover {
     flex-basis: 8rem;
 }
-.parent-div3:hover .child-div8 {
+.child-div8:hover {
     flex-basis: 32rem;
 }
-.parent-div3:hover .child-div9 {
+.child-div9:hover {
     flex-basis: 8rem;
 }
 .parent-div4:hover .child-div10 {

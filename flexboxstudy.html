@@ -16,6 +16,10 @@
             margin: 0;
             color: aliceblue;
         }
+        p {
+            margin: 0; 
+            padding:0;
+        }
     </style>
 </head>
 
@@ -35,22 +39,25 @@
         padding: 1rem;">
             <span style="font-size: 2.5rem;flex-shrink: 0;"> parent div1</span>
 
-            <div class="child-div0" style="
+            <div class="child child-div0" style="
             background-color: yellow;
-            width: 9rem;">
+            width: 3rem;
+            
+            ">
                 child div0
                 <p>flex: 1;</p>
             </div>
-            <div class="child-div1" style="
+            <div class="child child-div1" style="
             background-color: yellow;
             width: 9rem;">
                 child div1
                 <p>flex: 1;</p>
             </div>
 
-            <div class="child-div2" style="
+            <div class="child child-div2" style="
             background-color: aqua;
             width: 15rem;
+            transition: all 1s;
             ">child div2
                 <p>flex: 1;</p>
                 <p>hover --> flex: 0;</p>
@@ -66,29 +73,30 @@
         padding: 1rem;">
             <span style="font-size: 2.5rem;flex-shrink: 0;"> parent div2</span>
 
-            <div class="child-div3" style="
+            <div class="child child-div3" style="
         background-color: chartreuse;
         width: 10rem;
         ">child div3
                 <p>flex-shrink: 0;</p>
             </div>
-            <div class="child-div4" style="
+            <div class="child child-div4" style="
             background-color: yellow;
             width: 9rem;">
                 child div4
                 <p>flex-shrink: 1;</p>
             </div>
 
-            <div class="child-div5" style="
+            <div class="child child-div5" style="
             background-color: aqua;
             width: 15rem;
             ">child div5
                 <p>flex-grow: 0;</p>
             </div>
 
-            <div class="child-div6" style="
+            <div class="child child-div6" style="
             background-color: chartreuse;
             width: 10rem;
+            transition: all 1s;
             ">child div6
                 <p>flex-grow: 1;</p>
             </div>
@@ -98,26 +106,31 @@
         width: calc(100vw - 6rem);
         height: 8rem;
         display: flex;
+        flex-direction: row;
         gap: 5px;
-        padding: 1rem;">
+        padding: 1rem;
+        ">
             <span style="font-size: 2.5rem;flex-shrink: 0;"> parent div3</span>
 
-            <div class="child-div7" style="
+            <div class="child child-div7" style="
             background-color: yellow;
+            transition:all 1s ease-in-out;
            ">
                 child div7
                 <p>flex-basis: 8rem;</p>
             </div>
 
-            <div class="child-div8" style="
+            <div class="child child-div8" style="
             background-color: aqua;
+            transition: all 1s ease-in-out;
             
             ">child div8
                 <p>flex-basis: 32rem;</p>
             </div>
 
-            <div class="child-div9" style="
+            <div class="child child-div9" style="
             background-color: chartreuse;
+            transition: all 1s ease-in-out;
             
             ">child div9
                 <p>flex-basis: 8rem;</p>
@@ -134,21 +147,21 @@
         padding: 1rem;">
             <span style="font-size: 2.5rem;flex-shrink: 0;"> parent div4</span>
 
-            <div class="child-div10" style="
+            <div class="child child-div10" style="
             background-color: yellow;
             ">
                 child div10
                 <p>order: 2; </p>
             </div>
 
-            <div class="child-div11" style="
+            <div class="child child-div11" style="
             background-color: aqua;
             
             ">child div11
                 <p>order: 3;</p>
             </div>
 
-            <div class="child-div12" style="
+            <div class="child child-div12" style="
             background-color: chartreuse;
           
             ">child div12
