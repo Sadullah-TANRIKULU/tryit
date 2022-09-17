@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="events.css">
+    <title>Events Vanilla JS</title>
+    <style>
+        h2 {
+            font-size: 2rem;
+            background: linear-gradient(to left, rgba(11, 11, 111, 0.4), rgba(88, 88, 188, 1));
+            font-family: 'Kanit', sans-serif;
+            text-align: center;
+            margin: 0;
+            color: aliceblue;
+        }
+
+        .large {
+            background-color: black;
+        }
+        .online {
+            background-color: lime;
+            color: black;
+        }
+        .offline {
+            background-color: red;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>To remember JS " Events "</h2>
+    <div class="js-events">
+        <form action="" id="form" style="display: flex; flex-direction: column; gap: 2rem; align-items: flex-start;">
+            <div>
+                <label for="">Full Name</label>
+                <input type="text" name="" id="fullname">
+                <label for="">onchange event</label>
+                <p class="prgh1" style="background-color: #f5dd00; width: 15rem; height: 2.5rem;"></p>
+            </div>
+            <div>
+                <label for="">Job Title</label>
+                <select name="jobtitle" id="jobtitle">
+                    <option value="FS Dev">FS Dev</option>
+                    <option value="Data Scientist">Data Scientist</option>
+                    <option value="Cloud Engineer">Cloud Engineer</option>
+                </select>
+                <label for="">onclick event</label>
+                <p class="prgh2" style="background-color: #f5dd00; width: 15rem; height: 2.5rem;"></p>
+            </div>
+            <div>
+
+                <button type="submit" id="btn" style="border: none; background-color: blue; color: aliceblue; width: 10rem; height: 5rem; font-size: larger;">Submit</button>
+                <label for="">onsubmit event</label>
+            </div>
+
+            <p class="prgh3" style="background-color: #f5dd00; width: 15rem; height: 4rem;"></p>
+        </form>
+
+
+        <div id="window" style="display: flex; flex-direction: column; gap: 2rem; align-items: flex-start;">
+            <div>
+                <label for="">onload event</label>
+                <p class="prgh4" style="background-color: #f5dd00; width: 15rem; height: 4rem;"></p>
+            </div>
+            <div>
+                <label for="">ondrag ondrop event</label>
+                <div class="prgh5" draggable="true" style="background-color: #f5dd00; color:black; width: 15rem; height: 2.5rem; cursor:grab">
+                    Draggable DIV</div>
+            </div>
+            <div>
+                <label for="">ondoubleclick event</label>
+                <p class="prgh6" style="border:3px solid #f5dd00; width: 15rem; height: 2.5rem; transition: all 1s;">
+                </p>
+            </div>
+        </div>
+        <div>
+
+            <div class="dropzone" id="droptarget"
+                style="border: none; color: aliceblue; font-size: larger; background-color: #4545ff; width: 17rem; height: 6rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                dropzone
+
+            </div>
+            <br><br>
+            <div >
+                <div class="network" style="border:3px solid #f5dd00; width: 15rem; height: 5rem; transition: all 1s;">Connection Status offline-online events</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="events.js"></script>
+</body>
+
+</html>
