@@ -1,17 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
-.js-events {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height: calc(100vh - 5.5rem);
-    place-items: initial;
-    padding: 1rem;
-    background: linear-gradient(to left, rgba(11, 11, 111, 0.4), rgba(88, 88, 188, 1));
-    font-family: 'Acme', sans-serif;
-    font-size: 1.5rem;
-    color: aliceblue;
-}
 
+@media screen and (max-width:600px) {
+    h2 {
+        text-align: left;
+    }
+    
+    .js-events {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        place-items: initial;
+        padding: 1rem;
+        background: linear-gradient(to left, rgba(11, 11, 111, 0.4), rgba(88, 88, 188, 1));
+        font-family: 'Acme', sans-serif;
+        font-size: 1.5rem;
+        color: aliceblue;
+    }
+}
+    
 p {
     color: black;
+}
+
+@media screen and (min-width:800px) {
+    
+    .js-events {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: calc(100vh - 5.5rem);
+        place-items: initial;
+        padding: 1rem;
+        background: linear-gradient(to left, rgba(11, 11, 111, 0.4), rgba(88, 88, 188, 1));
+        font-family: 'Acme', sans-serif;
+        font-size: 1.5rem;
+        color: aliceblue;
+    }
+    
 }
