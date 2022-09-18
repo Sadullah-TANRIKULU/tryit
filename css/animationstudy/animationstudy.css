@@ -1,0 +1,81 @@
+/* p {  ### animation short hand usage ###
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+} */
+/* .css-animation-ornegi {
+    animation-name: ornek-animasyon;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 3;
+    animation-direction: normal;
+    animation-fill-mode: none;
+} */
+
+.cssanimations {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+  height: 90vh;
+  place-items: center;
+  padding: 1rem;
+  background: linear-gradient(to left, rgba(112, 85, 100, 0.8), rgba(133, 70, 100, 1));
+  font-family: 'Kanit', sans-serif;
+  color: antiquewhite;
+}
+
+#bluecar1:hover {
+  animation: spin 3s alternate-reverse infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#bluecar2:hover {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+
+#bluecar3:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1.5, 1.5);
+  }
+  50% {
+    opacity: .5;
+    transform: scale(1.2, 1.2);
+  }
+}
+
+
+#bluecar4:hover {
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
