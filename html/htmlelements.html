@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn FrontEnd</title>
+    <style>
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 1.5rem 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 18px rgb(0 0 0 / 0.1);
+      }
+      section {
+        margin-bottom: 2rem;
+      }
+      header,
+      nav,
+      main,
+      footer,
+      article,
+      aside,
+      section {
+        border: 1px solid #ddd;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 6px;
+        background: #fafafa;
+      }
+      nav a {
+        margin-right: 1rem;
+        text-decoration: none;
+        color: #0275d8;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      dl {
+        background: #efefef;
+        padding: 1rem;
+        border-radius: 6px;
+      }
+      dt {
+        font-weight: bold;
+        margin-top: 1rem;
+        color: #0b5ed7;
+      }
+      dd {
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 1rem;
+      }
+      th,
+      td {
+        border: 1px solid #bbb;
+        text-align: left;
+        padding: 0.5rem 0.75rem;
+      }
+      th {
+        background: #dbe9f4;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: bold;
+        color: #0a58ca;
+      }
+      details p {
+        margin: 0.5rem 0 0;
+      }
+      mark {
+        background: #ffecb5;
+        padding: 0 0.2rem;
+      }
+      blockquote {
+        border-left: 4px solid #ffa500;
+        padding-left: 1rem;
+        color: #666;
+        font-style: italic;
+      }
+      code {
+        font-family: Consolas, "Courier New", monospace;
+        background: #efefef;
+        padding: 0.15rem 0.3rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+
+  <body
+    style="
+      font-family: 'Trebuchet MS', sans-serif;
+      font-size: 1rem;
+      background: linear-gradient(
+        to bottom,
+        rgb(196, 226, 136),
+        rgba(202, 202, 226, 0.1),
+        rgba(202, 202, 226, 0.2),
+        rgba(202, 202, 226, 0.1)
+      );
+    "
+  >
+    <div class="container">
+      <header>
+        <h1>HTML Elements Showcase 2025</h1>
+        <p>
+          A curated collection of common and lesser-known HTML5 elements with
+          usage examples and styling.
+        </p>
+        <nav>
+          <a href="#structure">Structure</a>
+          <a href="#media">Media</a>
+          <a href="#forms">Forms</a>
+          <a href="#interactive">Interactive</a>
+          <a href="#semantic">Semantic & Info</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="structure">
+          <h2>Document Structure Elements</h2>
+          <article>
+            <header>
+              <h3>Header & Navigation</h3>
+              <nav aria-label="Primary navigation">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+              </nav>
+            </header>
+            <section>
+              <h3>Main Content Area</h3>
+              <p>
+                This is an example of the <code>&lt;main&gt;</code> element that
+                wraps the primary content of the page.
+              </p>
+              <aside>
+                <h4>Related Links (Aside)</h4>
+                <ul>
+                  <li><a href="../index.html">Another page</a></li>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >External resource</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <footer>
+              <p>Page footer with © 2025 by Web Showcase</p>
+            </footer>
+          </article>
+        </section>
+
+        <section id="media">
+          <h2>Media Elements</h2>
+          <figure>
+            <img src="../assets/bluecar.jpg" alt="blue car" />
+            <figcaption>
+              An example of <code>&lt;figure&gt;</code> and
+              <code>&lt;figcaption&gt;</code>.
+            </figcaption>
+          </figure>
+          <video controls width="400">
+            <source
+              src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <audio controls>
+            <source src="../assets/t-rex-roar.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <section id="forms">
+          <h2>Form Elements</h2>
+          <form>
+            <label for="username">Username:</label><br />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              required
+            /><br /><br />
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="birthdate">Birthdate:</label><br />
+            <input type="date" id="birthdate" name="birthdate" /><br /><br />
+
+            <label for="color">Favorite Color:</label><br />
+            <input
+              type="color"
+              id="color"
+              name="color"
+              value="#0055ff"
+            /><br /><br />
+
+            <label for="range">Volume:</label><br />
+            <input
+              type="range"
+              id="range"
+              name="range"
+              min="0"
+              max="100"
+              value="50"
+            /><br /><br />
+
+            <label for="gender">Gender:</label><br />
+            <select id="gender" name="gender">
+              <option value="">Select</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other</option></select
+            ><br /><br />
+
+            <fieldset>
+              <legend>Subscription Options</legend>
+              <label
+                ><input type="checkbox" name="subscribe" /> Newsletter</label
+              ><br />
+              <label
+                ><input type="checkbox" name="subscribe" /> Promotions</label
+              ><br />
+              <label><input type="checkbox" name="subscribe" /> Updates</label>
+            </fieldset>
+            <br />
+
+            <fieldset>
+              <legend>Choose Your Payment Method</legend>
+              <label
+                ><input type="radio" name="payment" value="credit" /> Credit
+                Card</label
+              ><br />
+              <label
+                ><input type="radio" name="payment" value="paypal" />
+                PayPal</label
+              ><br />
+              <label
+                ><input type="radio" name="payment" value="bitcoin" />
+                Bitcoin</label
+              >
+            </fieldset>
+            <br />
+
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+
+        <section id="interactive">
+          <h2>Interactive Elements</h2>
+          <details>
+            <summary>
+              Click to Expand: Info Sections with &lt;details&gt; and
+              &lt;summary&gt;
+            </summary>
+            <p>This is collapsible content, great for FAQs and extra info.</p>
+          </details>
+          <dialog id="myDialog">
+            <p>This is a native dialog popup!</p>
+            <button onclick="document.getElementById('myDialog').close()">
+              Close
+            </button>
+          </dialog>
+          <button onclick="document.getElementById('myDialog').showModal()">
+            Open Dialog
+          </button>
+          <br /><br />
+          <progress value="70" max="100">70%</progress>
+          <meter value="0.6">60%</meter>
+          <br /><br />
+          <template id="my-template">
+            <p>This content is from a &lt;template&gt; element.</p>
+          </template>
+        </section>
+
+        <section id="semantic">
+          <h2>Other Semantic & Informational Elements</h2>
+          <time datetime="2025-09-02T23:00:00Z"
+            >September 2, 2025, 11:00 PM UTC</time
+          >
+          <p>
+            Text with highlighted <mark>important</mark> portion using
+            <code>&lt;mark&gt;</code>.
+          </p>
+          <blockquote cite="https://www.w3.org/TR/html52/">
+            This is a blockquote with citation, useful for quoting authoritative
+            sources.
+          </blockquote>
+          <code
+            >&lt;code&gt;, &lt;var&gt;, &lt;samp&gt; and &lt;kbd&gt; for inline
+            code or keyboard inputs</code
+          >
+          <br /><br />
+          <wbr />Here is a ret ert ret ert ert ert ert verylongwordthatneeds<wbr />break
+          opportunity using &lt;wbr&gt;.
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2025 HTML Elements Demo. Built for learning.</p>
+      </footer>
+    </div>
+  </body>
+</html>

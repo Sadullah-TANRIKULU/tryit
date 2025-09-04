@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Walking Man Canvas Animation</title>
+    <style>
+      body {
+        font-family: "Trebuchet MS", sans-serif;
+        background: linear-gradient(
+          to bottom,
+          #c4e288,
+          rgba(202, 202, 226, 0.1),
+          rgba(202, 202, 226, 0.2),
+          rgba(202, 202, 226, 0.1)
+        );
+        margin: 20px;
+        display: flex;
+      }
+      canvas {
+        border: 2px solid black;
+        background: linear-gradient(
+          to bottom,
+          #c4e288,
+          rgba(202, 202, 226, 0.1),
+          rgba(202, 202, 226, 0.2),
+          rgba(202, 202, 226, 0.1)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="mycanvas" width="500" height="900"></canvas>
+    <h2>Canvas Element</h2>
+    <code>
+      <pre>
+        const canvas = document.getElementById("mycanvas");
+      const ctx = canvas.getContext("2d");
+
+      const sprite = new Image();
+      sprite.src = "../assets/walking-man-sprite.png";
+
+      const frameWidth = 333.3; // width of one frame in sprite sheet
+      const frameHeight = 690; // height of each frame
+      const totalFrames = 6;
+
+      let currentFrame = 0;
+      let posX = 0;
+
+      // Raise image 30 pixels so fully visible
+      const posY = canvas.height - frameHeight;
+
+      // Frame rate control variables
+      const fps = 12; // target frames per second
+      const fpsInterval = 1000 / fps;
+      let then = window.performance.now();
+
+      sprite.onload = function () {
+        requestAnimationFrame(animate);
+      };
+
+      function animate(time) {
+        requestAnimationFrame(animate);
+
+        const now = time || window.performance.now();
+        const elapsed = now - then;
+
+        if (elapsed > fpsInterval) {
+          then = now - (elapsed % fpsInterval);
+
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          // Draw current frame
+          ctx.drawImage(
+            sprite,
+            currentFrame * frameWidth,
+            0,
+            frameWidth,
+            frameHeight,
+            posX,
+            posY,
+            frameWidth,
+            frameHeight
+          );
+
+          // Next frame index
+          currentFrame = (currentFrame + 1) % totalFrames;
+
+          // Move position horizontally
+          posX += 2;
+          if (posX > canvas.width) {
+            posX = -frameWidth;
+          }
+        }
+      }
+      </pre>
+    </code>
+    <script>
+      const canvas = document.getElementById("mycanvas");
+      const ctx = canvas.getContext("2d");
+
+      const sprite = new Image();
+      sprite.src = "../assets/walking-man-sprite.png";
+
+      const frameWidth = 333.3; // width of one frame in sprite sheet
+      const frameHeight = 690; // height of each frame
+      const totalFrames = 6;
+
+      let currentFrame = 0;
+      let posX = 0;
+
+      const posY = canvas.height - frameHeight;
+
+      // Frame rate control variables
+      const fps = 9; // target frames per second
+      const fpsInterval = 1000 / fps;
+      let then = window.performance.now();
+
+      sprite.onload = function () {
+        requestAnimationFrame(animate);
+      };
+
+      function animate(time) {
+        requestAnimationFrame(animate);
+
+        const now = time || window.performance.now();
+        const elapsed = now - then;
+
+        if (elapsed > fpsInterval) {
+          then = now - (elapsed % fpsInterval);
+
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          // Draw current frame
+          ctx.drawImage(
+            sprite,
+            currentFrame * frameWidth,
+            0,
+            frameWidth,
+            frameHeight,
+            posX,
+            posY,
+            frameWidth,
+            frameHeight
+          );
+
+          // Next frame index
+          currentFrame = (currentFrame + 1) % totalFrames;
+
+          // Move position horizontally
+          posX += 12;
+          if (posX > canvas.width) {
+            posX = -frameWidth;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

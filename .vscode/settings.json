@@ -20,5 +20,6 @@
         "terminal.ansiRed": "#FF0000",
         "terminal.ansiWhite": "#D0D0D0",
         "terminal.ansiYellow": "#FF0099"
-    }
+    },
+    "liveServer.settings.port": 5501
 }
